@@ -17,12 +17,15 @@ namespace Tugas2_20200140136_A
                 con = new SqlConnection("data source =ANN\\ANNSANDRYN; database=KontrakTenantMall;Integrated Security = TRUE");
                 con.Open();
 
-                Console.WriteLine("Successfully connected to Database!");
+                SqlCommand insert1 = new SqlCommand("insert into pemilik (ID_pemilik, nama_pemilik, noHP_pemilik, alamat_pemilik, email_pemilik, jenisKelamin_pemilik) values ('3320357720020001','Anna Gianna', '0812345678910', 'Jalan Bahagia Nomor 1 Yogyakarta', 'anna123@gmail.com','P')", con);
+                insert1.ExecuteNonQuery();
+
+                Console.WriteLine("Successfully add data to Database!");
                 Console.ReadKey();
             }
             catch (Exception e)
             {
-                Console.WriteLine("Oops, Failed connected to Database... " + e);
+                Console.WriteLine("Oops, Failed add data to Database... " + e);
                 Console.ReadKey();
             }
             finally
