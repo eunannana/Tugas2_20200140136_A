@@ -23,6 +23,9 @@ namespace Tugas2_20200140136_A
                 SqlCommand insert2 = new SqlCommand("insert into penyewa (ID_penyewa, nama_penyewa, noHP_penyewa, alamat_penyewa, email_penyewa, jenisKelamin_penyewa) values ('3319237081901982','Aan Adrian','0810987654321','Jalan Kenangan Nomor 2 Yogyakarta','aan321@gmail.com','L')", con);
                 insert2.ExecuteNonQuery();
 
+                SqlCommand insert3 = new SqlCommand("insert into tenant (ID_tenant, jenis_sewa, lama_sewa, harga_sewa, lokasi_tenant) values ('201','TAHUN','2',20000000,'Lantai 3 Blok F')", con);
+                insert3.ExecuteNonQuery();
+
                 Console.WriteLine("Successfully add data to Database!");
                 Console.ReadKey();
             }
