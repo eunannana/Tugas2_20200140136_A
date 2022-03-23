@@ -20,6 +20,9 @@ namespace Tugas2_20200140136_A
                 SqlCommand insert1 = new SqlCommand("insert into pemilik (ID_pemilik, nama_pemilik, noHP_pemilik, alamat_pemilik, email_pemilik, jenisKelamin_pemilik) values ('3320357720020001','Anna Gianna', '0812345678910', 'Jalan Bahagia Nomor 1 Yogyakarta', 'anna123@gmail.com','P')", con);
                 insert1.ExecuteNonQuery();
 
+                SqlCommand insert2 = new SqlCommand("insert into penyewa (ID_penyewa, nama_penyewa, noHP_penyewa, alamat_penyewa, email_penyewa, jenisKelamin_penyewa) values ('3319237081901982','Aan Adrian','0810987654321','Jalan Kenangan Nomor 2 Yogyakarta','aan321@gmail.com','L')", con);
+                insert2.ExecuteNonQuery();
+
                 Console.WriteLine("Successfully add data to Database!");
                 Console.ReadKey();
             }
